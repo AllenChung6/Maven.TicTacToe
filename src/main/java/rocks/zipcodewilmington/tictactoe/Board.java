@@ -75,66 +75,16 @@ public class Board {
     }
 
     public Boolean isTie() {
-        /*boolean winnerX = isInFavorOfX();
-        boolean winnerO = isInFavorOfO();
-        if (!(winnerX && winnerO))  {
-            return false;
-        }*/
-
-        for (row = 0; row < 3; row++) {
-            for (col = 0; col < 3; col++) { //check if x has three and a row for all rows on board.
-                if (board[0][0] == 'X' && (board[0][0] == board[0][1]) && (board[0][1] == board[0][2])) {
-                    xSpot++;
-                } else if (board[1][0] == 'X' && (board[1][0] == board[1][1]) && (board[1][1] == board[1][2])) {
-                    xSpot++;
-                } else if (board[2][0] == 'X' && (board[2][0] == board[2][1]) && (board[2][1] == board[2][2])) {
-                    xSpot++;
-                    ;        //check if x has three and a row for all columns
-                } else if (board[0][0] == 'X' && (board[0][0] == board[1][0]) && (board[1][0] == board[2][0])) {
-                    xSpot++;
-                } else if (board[0][1] == 'X' && (board[0][1] == board[1][1]) && (board[1][1] == board[2][1])) {
-                    xSpot++;
-                } else if (board[0][2] == 'X' && (board[0][2] == board[1][2]) && (board[1][2] == board[2][2])) {
-                    xSpot++;        //Check if x has three and a row for all diagonals
-                } else if (board[0][0] == 'X' && (board[0][0] == board[1][1]) && (board[1][1] == board[2][2])) {
-                    xSpot++;
-                } else if (board[0][2] == 'X' && (board[0][2] == board[1][1]) && (board[1][1] == board[2][0])) {
-                    xSpot++;
-                }
-            }
+        if (isInFavorOfX() == isInFavorOfO()) {
+            return true;
         }
 
-
-
-
-        for (row = 0; row < 3; row++) {
-            for (col = 0; col < 3; col++) { //check if x has three and a row for all rows on board.
-                if (board[0][0] == 'O' && (board[0][0] == board[0][1]) && (board[0][1] == board[0][2])) {
-                    oSpot++;
-                } else if (board[1][0] == 'O' && (board[1][0] == board[1][1]) && (board[1][1] == board[1][2])) {
-                    oSpot++;
-                } else if (board[2][0] == 'O' && (board[2][0] == board[2][1]) && (board[2][1] == board[2][2])) {
-                    oSpot++;
-                    ;        //check if x has three and a row for all columns
-                } else if (board[0][0] == 'O' && (board[0][0] == board[1][0]) && (board[1][0] == board[2][0])) {
-                    oSpot++;
-                } else if (board[0][1] == 'O' && (board[0][1] == board[1][1]) && (board[1][1] == board[2][1])) {
-                    oSpot++;
-                } else if (board[0][2] == 'O' && (board[0][2] == board[1][2]) && (board[1][2] == board[2][2])) {
-                    oSpot++;        //Check if x has three and a row for all diagonals
-                } else if (board[0][0] == 'O' && (board[0][0] == board[1][1]) && (board[1][1] == board[2][2])) {
-                    oSpot++;
-                } else if (board[0][2] == 'O' && (board[0][2] == board[1][1]) && (board[1][1] == board[2][0])) {
-                    oSpot++;
-                }
-            }
-        }
-
-        System.out.println(xSpot);
+        /*System.out.println(xSpot);
         System.out.println(oSpot);
         if (xSpot == oSpot) {
             return true;
         }
+        return false;*/
         return false;
     }
 
